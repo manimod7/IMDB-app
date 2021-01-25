@@ -14,7 +14,8 @@ router.get("/login", (req, res)=>{
 });
 router.get("/result", (req, res)=>{
     const query = req.query.search;
-    const url = "http://www.omdbapi.com/?apikey=cfd672ef&s=" + query;
+    const key = process.env.apikey;
+    const url = key + query;
     request(url, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body)

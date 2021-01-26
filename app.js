@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(session({
     resave: false, // don't save session if unmodified
     saveUninitialized: false, // don't create session until something stored
-    secret: 'shhhh, very secret lubba wubba dubba etc'
+    secret: 'Secret'
 }));
 //To have a global variable across
 app.use(function(req, res, next) {

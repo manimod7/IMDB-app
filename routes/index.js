@@ -72,7 +72,7 @@ router.post("/login", function(req, res) {
             req.session.isLoggedIn = false;
             res.redirect("/");
         } else {
-            //console.log("Login is successfull");
+            //console.log("Login is successful");
             req.flash("success", "Login Successful");
             //Setting Up the session
             req.session.isLoggedIn = true;

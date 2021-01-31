@@ -1,6 +1,7 @@
 <%- include("./partials/header")%>
 <!--Main Page-->
 <div class="container">
+  <br>
     <h1><%=movie.Title%></h1>
     <!--Card-->
   <div class="card flex-row flex-wrap">
@@ -9,11 +10,17 @@
     </div>
     <div class="card-block px-2">
       <h4 class="card-title"><%=movie.Title%></h4>
-      <p class="card-text"><%=movie.Plot%></p>
-      <p class="card-text">Actors: <%=movie.Actors%></p>
+      <p class="card-title">IMDB Rating - <%=movie.imdbRating%></p>
+      
+      <p class="card-text"><b>PLOT</b><br><%=movie.Plot%></p>
+      <p class="card-text"><b>ACTORS</b> <br> <%=movie.Actors%></p>
+      <br>
+
     </div>
     <div class="w-100"></div>
     <div class="card-footer w-100 text-muted">Box Office: <%=movie.BoxOffice%></div>
+    <br>
+
   </div>
 </div>
 <%- include("./partials/footer")%>

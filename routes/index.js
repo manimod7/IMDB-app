@@ -40,7 +40,8 @@ router.get("/result/:id", (req, res)=>{
                 res.send("Movie Not Found");
             }else{
                 //res.send(data);
-                res.render("Info", {movie: data});    
+                res.render("Info", {movie: data}); 
+                // console.log(data.imdbRating); 
             }
         }else{
             res.send('Error');

@@ -31,7 +31,8 @@ router.get("/result", (req, res)=>{
     });
 });
 router.get("/result/:id", (req, res)=>{
-    const url = "http://www.omdbapi.com/?apikey=cfd672ef&i=" + req.params.id;
+    const id =req.params.id
+    const url = process.env.res + id;
     request(url, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body)

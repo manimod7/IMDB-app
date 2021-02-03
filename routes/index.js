@@ -42,7 +42,7 @@ router.get("/result/:id", (req, res)=>{
             }else{
                 //res.send(data);
                 res.render("Info", {movie: data}); 
-                // console.log(data.imdbRating); 
+                
             }
         }else{
             res.send('Error');

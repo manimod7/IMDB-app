@@ -11,7 +11,12 @@
     </p>
     <hr class="my-4" />
     <p>Made by Manish Modwani.</p>
-    <a class="btn btn-primary btn-lg" href="/signup" role="button">Sign Up!</a>
+    <%if(currentUser===null){%>
+      <a class="btn btn-primary btn-lg" href="/signup" role="button">Sign up</a>
+      <a class="btn btn-success btn-lg" href="/login" role="button">Login</a>
+      <%}else{%>
+        <a class="btn btn-danger btn-lg" href="/logout" role="button">Logout</a>
+      <%}%>
   </div>
 </div>
 <%- include("./partials/footer")%>
